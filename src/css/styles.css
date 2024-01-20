@@ -23,3 +23,40 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1440px;
+  background: #fff;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.modal {
+  background: rgba(46, 47, 66, 0.8);
+  width: 1440px;
+  height: 696px;
+  flex-shrink: 0;
+}

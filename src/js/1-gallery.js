@@ -76,13 +76,13 @@ galleryList.innerHTML = createMarkup(images);
 
 galleryList.addEventListener("click", handleProductClick);
 
-// function handleProductClick(event) {
-//   event.preventDefault()
-//   if (event.target.tagName !== "IMG") {
-//     return;
-//   }
-//   const original = event.target.dataset.source;
-//   const description = event.target.alt;
+function handleProductClick(event) {
+  event.preventDefault()
+  if (event.target.tagName !== "IMG") {
+    return;
+  }
+  const original = event.target.dataset.source;
+  const description = event.target.alt;
 
 //    instance = basicLightbox.create(`
 //     <div class="modal">
@@ -100,7 +100,7 @@ galleryList.addEventListener("click", handleProductClick);
 
 // instance.show()
   
-// }
+}
 
 
 function createMarkup(arr) {
