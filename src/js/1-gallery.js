@@ -72,7 +72,7 @@ const galleryList = document.querySelector(".gallery");
 
 let instance = null
 
-galleryList.innerHTML = createMarkup(images);
+const gallaryArray = createMarkup(images);
 
 galleryList.addEventListener("click", handleProductClick);
 
@@ -84,23 +84,8 @@ function handleProductClick(event) {
   const original = event.target.dataset.source;
   const description = event.target.alt;
 
-//    instance = basicLightbox.create(`
-//     <div class="modal">
-//         <img  src="${original}" alt="${description}"/>
-//     </div>`
-//     ,
-//     {onShow: (instance) => {
-//       document.addEventListener("keydown", onClose);
-//     },
-	
-//       onClose: (instance) => {
-//     document.removeEventListener("keydown", onClose)
-//   }}
-// )
-
-// instance.show()
-  
 }
+
 
 
 function createMarkup(arr) {
@@ -123,9 +108,13 @@ function onClose(e) {
 }
 
 
+galleryList.insertAdjacentHTML('beforeend', gallaryArray);
 
-
-
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+});
 
 
 

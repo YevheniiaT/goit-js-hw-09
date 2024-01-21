@@ -40,6 +40,9 @@ a {
   height: 100%;
 }
 
+
+
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -53,6 +56,8 @@ a {
   height: 200px;
   flex-shrink: 0;
 }
+
+
 
 .modal {
   background: rgba(46, 47, 66, 0.8);
