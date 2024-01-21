@@ -26,7 +26,8 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     const { email, message } = form.elements;
   
-     console.log({ email: email.value.trim(), message: message.value.trim() })
+    console.log({ email: email.value.trim(), message: message.value.trim() })
+    
     localStorage.removeItem(LOCAL_STORAGE_KEY);
    
 //      const { email, message } = form.elements;
@@ -34,3 +35,4 @@ form.addEventListener('submit', (event) => {
 //       localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(dataForm))
     
 });
+
