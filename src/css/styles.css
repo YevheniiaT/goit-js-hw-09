@@ -44,11 +44,17 @@ a {
 
 
 .gallery {
-  display: flex;
+display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  max-width: 1140px;
+  padding: 0;
+  list-style: none;
+  align-content: center;
+  justify-content: center;
   align-items: flex-start;
   gap: 24px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gallery-image {
@@ -65,3 +71,4 @@ a {
   height: 696px;
   flex-shrink: 0;
 }
+
