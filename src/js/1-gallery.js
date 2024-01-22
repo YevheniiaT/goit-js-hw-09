@@ -74,19 +74,6 @@ let instance = null
 
 const gallaryArray = createMarkup(images);
 
-galleryList.addEventListener("click", handleProductClick);
-
-function handleProductClick(event) {
-  event.preventDefault()
-  if (event.target.tagName !== "IMG") {
-    return;
-  }
-  const original = event.target.dataset.source;
-  const description = event.target.alt;
-
-}
-
-
 
 function createMarkup(arr) {
     return arr
@@ -95,7 +82,6 @@ function createMarkup(arr) {
    <a class="gallery-link" href="${original}">
    <img class="gallery-image"
    src="${preview}"
-   data-source="${original}"
    alt="${description}"/>
    </a>
     </li > 
@@ -112,7 +98,6 @@ galleryList.insertAdjacentHTML('beforeend', gallaryArray);
 
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
-  captionPosition: 'bottom',
   captionDelay: 250,
 });
 
