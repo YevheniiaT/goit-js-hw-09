@@ -70,7 +70,7 @@ const images = [
 
 const galleryList = document.querySelector(".gallery");
 
-let instance = null
+
 
 const gallaryArray = createMarkup(images);
 
@@ -89,9 +89,6 @@ function createMarkup(arr) {
         .join("");
 }
 
-function onClose(e) {
-  if (e.code === "Escape") instance.close()
-}
 
 
 galleryList.insertAdjacentHTML('beforeend', gallaryArray);
